@@ -79,7 +79,7 @@
 // ЯКЩО МІСЯЦЬ - ціна 10.99
 // ЯКЩО РІК - ціна 100.99
 
-const subskription = prompt("Оберіть період підписки").toLowerCase();
+const subskription = prompt('Оберіть період підписки').toLowerCase();
 
 // if (subskription === "день") {
 //   console.log(1.99);
@@ -94,18 +94,37 @@ const subskription = prompt("Оберіть період підписки").toLo
 // }
 
 switch (subskription) {
-  case "день":
+  case 'день':
     console.log(1.99);
     break;
-  case "неділя":
+  case 'неділя':
     console.log(5.99);
     break;
-  case "місяць":
+  case 'місяць':
     console.log(10.99);
     break;
-  case "рік":
+  case 'рік':
     console.log(100.99);
     break;
   default:
-    console.log("Помилка");
+    console.log('Помилка');
 }
+
+// ЗАДАЧА 7
+// НАПИШІТЬ ПРОГРАМУ, ЯКА ПРОВІРЯЄ ЛОГІН І ПАРОЛЬ, І ВИВОДИТЬ ПРИВІТАННЯ - ЯКЩО ВСЕ ДОБРЕ, АБО ВИДАЄ ПОМИЛКУ , ЩО НЕ ВІРНИЙ ЛОГІН
+
+// const login = 'sasha';
+// const password = 12345;
+
+// const userLogin = prompt('Введіть логін');
+// const userPassword = Number(prompt('Введіть пароль'));
+
+// if (userLogin === login && password === userPassword) {
+//   console.log('Вірно');
+// } else {
+//   console.log('Помилка');
+// }
+
+// const resolt =
+//   userLogin === login && userPassword === password ? 'Вірно' : 'Помилка';
+// console.log(resolt);
