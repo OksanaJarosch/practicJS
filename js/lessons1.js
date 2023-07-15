@@ -33,7 +33,6 @@
 // ЯКЩО НЕ ПРАВИЛЬНО КОРИСТУВАЧ ВВІВ, ТОДІ У КОНСОЛІ ПИШЕ
 // "НЕ ЗНАЄТЕ? 12"
 
-
 // const question = Number(prompt("СКІЛЬКИ МІСЯЦІВ МАЄ РІК"));
 
 // if (question === 12) {
@@ -73,3 +72,40 @@
 //  } else {
 //      console.log("Такого місяця не існує!");
 // }
+// ЗАДАЧА 8
+// НАПИШІТЬ ПРОГРАМУ , ЯКА БУДЕ ЗАПИТУВАТИ У КОРИСТУВАЧА ПЕРІОД ПІДПИСКИ НА СЕРВІС ТА ПОКАЗУВАТИМЕ ЦІНУ ПІДПИСКИ(ВИКОРИСТАЙ IF..ELSE, ТА ПЕРЕПИШИ НА SWITCH)
+// ЯКЩО ДЕНЬ - ціна 1.99
+// ЯУЩО НЕДІЛЯ - ціна 5.99
+// ЯКЩО МІСЯЦЬ - ціна 10.99
+// ЯКЩО РІК - ціна 100.99
+
+const subskription = prompt("Оберіть період підписки").toLowerCase();
+
+// if (subskription === "день") {
+//   console.log(1.99);
+// } else if (subskription === "неділя") {
+//   console.log(5.99);
+// } else if (subskription === "місяць") {
+//   console.log(10.99);
+// } else if (subskription === "рік") {
+//   console.log(100.99);
+// } else {
+//   console.log("Помилка");
+// }
+
+switch (subskription) {
+  case "день":
+    console.log(1.99);
+    break;
+  case "неділя":
+    console.log(5.99);
+    break;
+  case "місяць":
+    console.log(10.99);
+    break;
+  case "рік":
+    console.log(100.99);
+    break;
+  default:
+    console.log("Помилка");
+}
