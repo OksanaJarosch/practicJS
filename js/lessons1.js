@@ -41,3 +41,18 @@
 // } else {
 //     message = alert(`НЕ ЗНАЄТЕ? 12`);
 // }
+/*
+ЗАДАЧА 5
+НАПИШІТЬ ПРОГРАМУ, ЯКА ДОЗВОЛЯТИМЕ ЮЗЕРУ ВВОДИТИ ЧИСЛО І ОПРИДІЛЯТИМЕ ЧИ ЦЕ ПАРНЕ ЧИСЛО, ЧИ НЕ ПАРНЕ.
+*/
+
+const number = Number(prompt("Введіть число"));
+/*if (number % 2 === 0) {
+    console.log("парне")
+}
+else {
+    console.log ("непарне")
+}
+*/
+const isParne = number % 2 === 0 ? "парне" : "непарне";
+console.log(isParne);
