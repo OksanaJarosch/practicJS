@@ -43,8 +43,8 @@
 // 1) напишіть циклом for
 // const numbers = [2, 17, 94, 1, 23, 37];
 // 2) перепишіть функцією findSmallestNumber(numbers)
-console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
-console.log(findSmallestNumber([49, 4, 83, 7, 12]));
+// console.log(findSmallestNumber([2, 17, 94, 1, 23, 37]));
+// console.log(findSmallestNumber([49, 4, 83, 7, 12]));
 
 // const numbers = [2, 17, 94, 1, 23, 37];
 
@@ -57,12 +57,31 @@ console.log(findSmallestNumber([49, 4, 83, 7, 12]));
 // }
 // console.log(result);
 
-function findSmallestNumber(numbers) {
-  let result = numbers[0];
-  for (let i = 0; i < numbers.length - 1; i++) {
-      if (numbers[i] < result) {
-        result = numbers[i];
-      }
-  }
-  return result;
-}
+// function findSmallestNumber(numbers) {
+//   let result = numbers[0];
+//   for (let i = 0; i < numbers.length - 1; i++) {
+//       if (numbers[i] < result) {
+//         result = numbers[i];
+//       }
+//   }
+//   return result;
+// }
+
+
+
+// ЗАДАЧА 4
+//  Провірте , чи являється рядок полідромом
+// const str = "ротатор"; //true
+// const newString = "Hello"; //false
+
+// const newStr = str.split('');
+// newStr.reverse();
+// const reverseStr = newStr.join('');
+
+// console.log(str === reverseStr);
+
+
+// const newStrReverse = newString.split('').reverse().join('');
+
+// console.log(newStrReverse === newString);
+
