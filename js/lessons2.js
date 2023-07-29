@@ -85,3 +85,31 @@
 
 // console.log(newStrReverse === newString);
 
+//Напишіть ф-цію calculateAverage() яка приймає довільну кількість аргументів і повертає їх середнє значення .Всі аргументи будуть тільки числовими
+
+console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+console.log(calculateAverage(14, 8, 2)); // 8
+console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
+
+// function calculateAverage(...args) {
+ 
+//     let allArgs = 0;
+//     for (const arg of args) {
+//         allArgs += arg;
+    
+//     }
+
+//     return allArgs / args.length;
+// }
+
+function calculateAverage() {
+ 
+    const newArr = Array.from(arguments);
+
+     let allArgs = 0;
+    for (const arg of newArr) {
+        allArgs += arg;
+    
+    }
+    return allArgs / newArr.length;
+}
