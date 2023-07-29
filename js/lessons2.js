@@ -112,12 +112,12 @@
 // ЗАДАЧА 6
 // Напишіть ф-цію greet(name) , яка при виклику буде получати імя (як приклад , "Василь"), і логінувати рядок "Привіт, <імя>".У випадку , відсутнього
 // відсутнього значення, виводе аргумент "Привіт , гість"
-console.log(greet("Василь")); //Привіт Василь
-console.log(greet()); //Привіт гість
+// console.log(greet("Василь")); //Привіт Василь
+// console.log(greet()); //Привіт гість
 
-function greet(name = "guest") {
-  return `Hello, ${name}.`;
-}
+// function greet(name = "guest") {
+//   return `Hello, ${name}.`;
+// }
 
 // ЗАДАЧА 7
 // Виконайте рефакторинг замінивши обявлення ф-ції з function declaration на function expression та на стрілочну функцію
@@ -145,3 +145,20 @@ function greet(name = "guest") {
 //   return `число ${b} більше ${a}`;
 // };
 // const checkNumbers = (a, b) => a > b ? `число ${a} більше ${b}` : `число ${b} більше ${a}`
+
+// ЗАДАЧА 8
+// Напишіть ф-цію capitalize , яка буде приймати рядок і буде повертати новий рядок , де кожне слово буде з великої букви
+console.log(capitalize('the quick brown fox'));// 'The Quick Brown Fox '
+
+function capitalize(string) {
+  const words = string.split(" ");
+  const array = [];
+  for (let word of words) {
+    let strings = word[0].toUpperCase();
+    let restStrins = word.slice(1);
+    let finalResalt = `${strings}${restStrins}`;
+    array.push(finalResalt);
+  }
+
+  return array.join(" ");
+}
