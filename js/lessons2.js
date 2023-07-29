@@ -13,7 +13,6 @@
 // Классика, Рок-н-ролл
 // Рэп, Регги, Классика, Рок-н-ролл*/
 
-
 // const styles = ['Джаз', 'Блюз'];
 // styles.push('Рок-н-ролл');
 // styles.splice(1, 1, 'Классика');
@@ -37,7 +36,6 @@
 
 // logItems(names);
 
-
 // ЗАДАЧА 3
 // Напишіть код , який шукає саме найменше число в масиві
 // 1) напишіть циклом for
@@ -53,7 +51,7 @@
 //   if (numbers[i] < result) {
 //     result = numbers[i];
 //   }
- 
+
 // }
 // console.log(result);
 
@@ -67,8 +65,6 @@
 //   return result;
 // }
 
-
-
 // ЗАДАЧА 4
 //  Провірте , чи являється рядок полідромом
 // const str = "ротатор"; //true
@@ -80,36 +76,72 @@
 
 // console.log(str === reverseStr);
 
-
 // const newStrReverse = newString.split('').reverse().join('');
 
 // console.log(newStrReverse === newString);
 
 //Напишіть ф-цію calculateAverage() яка приймає довільну кількість аргументів і повертає їх середнє значення .Всі аргументи будуть тільки числовими
 
-console.log(calculateAverage(1, 2, 3, 4)); // 2.5
-console.log(calculateAverage(14, 8, 2)); // 8
-console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
+// console.log(calculateAverage(1, 2, 3, 4)); // 2.5
+// console.log(calculateAverage(14, 8, 2)); // 8
+// console.log(calculateAverage(27, 43, 2, 8, 36));// 23.2
 
 // function calculateAverage(...args) {
- 
+
 //     let allArgs = 0;
 //     for (const arg of args) {
 //         allArgs += arg;
-    
+
 //     }
 
 //     return allArgs / args.length;
 // }
 
-function calculateAverage() {
- 
-    const newArr = Array.from(arguments);
+// function calculateAverage() {
 
-     let allArgs = 0;
-    for (const arg of newArr) {
-        allArgs += arg;
-    
-    }
-    return allArgs / newArr.length;
+//     const newArr = Array.from(arguments);
+
+//      let allArgs = 0;
+//     for (const arg of newArr) {
+//         allArgs += arg;
+
+//     }
+//     return allArgs / newArr.length;
+// }
+
+// ЗАДАЧА 6
+// Напишіть ф-цію greet(name) , яка при виклику буде получати імя (як приклад , "Василь"), і логінувати рядок "Привіт, <імя>".У випадку , відсутнього
+// відсутнього значення, виводе аргумент "Привіт , гість"
+console.log(greet("Василь")); //Привіт Василь
+console.log(greet()); //Привіт гість
+
+function greet(name = "guest") {
+  return `Hello, ${name}.`;
 }
+
+// ЗАДАЧА 7
+// Виконайте рефакторинг замінивши обявлення ф-ції з function declaration на function expression та на стрілочну функцію
+// function checkNumbers(a, b) {
+//   if (a > b) {
+//     return `число ${a} більше ${b}`;
+//   }
+
+//   return `число ${b} більше ${a}`;
+// }
+
+// const checkNumbers = function(a, b) {
+//   if (a > b) {
+//     return `число ${a} більше ${b}`;
+//   }
+
+//   return `число ${b} більше ${a}`;
+// }
+
+// const checkNumbers = (a, b) => {
+//   if (a > b) {
+//     return `число ${a} більше ${b}`;
+//   }
+
+//   return `число ${b} більше ${a}`;
+// };
+// const checkNumbers = (a, b) => a > b ? `число ${a} більше ${b}` : `число ${b} більше ${a}`
