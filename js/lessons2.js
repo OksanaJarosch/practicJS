@@ -14,9 +14,25 @@
 // Рэп, Регги, Классика, Рок-н-ролл*/
 
 
-const styles = ['Джаз', 'Блюз'];
-styles.push('Рок-н-ролл');
-styles.splice(1, 1, 'Классика');
-console.log(styles.shift(0));
-styles.unshift('Рэп', 'Регги');
-console.log(styles);
+// const styles = ['Джаз', 'Блюз'];
+// styles.push('Рок-н-ролл');
+// styles.splice(1, 1, 'Классика');
+// console.log(styles.shift(0));
+// styles.unshift('Рэп', 'Регги');
+// console.log(styles);
+
+// ЗАДАЧА 2
+// Напишіть ф - цію logItems(array), яка буде получати масив і використовуючи цикл for ,
+// який для кожного елемента масива буде виводити в консоль 
+// повідомлення у форматі <індекс елемента> та <значення елемента>.
+// Номерація для кожного елемента масива['Mango', 'Poly', 'Ajax'] з індексом 0 буде виведено 1 - Mango, а для индекса 2 выведет 3 - Ajax.
+
+const names = ['Mango', 'Poly', 'Ajax'];
+
+function logItems(array) {
+  for (let arr of array) {
+    console.log( array.indexOf(arr), arr);
+  }
+}
+
+logItems(names);
