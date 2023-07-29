@@ -148,17 +148,56 @@
 
 // ЗАДАЧА 8
 // Напишіть ф-цію capitalize , яка буде приймати рядок і буде повертати новий рядок , де кожне слово буде з великої букви
-console.log(capitalize('the quick brown fox'));// 'The Quick Brown Fox '
+// console.log(capitalize('the quick brown fox'));// 'The Quick Brown Fox '
 
-function capitalize(string) {
-  const words = string.split(" ");
-  const array = [];
-  for (let word of words) {
-    let strings = word[0].toUpperCase();
-    let restStrins = word.slice(1);
-    let finalResalt = `${strings}${restStrins}`;
-    array.push(finalResalt);
-  }
+// function capitalize(string) {
+//   const words = string.split(" ");
+//   const array = [];
+//   for (let word of words) {
+//     let strings = word[0].toUpperCase();
+//     let restStrins = word.slice(1);
+//     let finalResalt = `${strings}${restStrins}`;
+//     array.push(finalResalt);
+//   }
 
-  return array.join(" ");
-}
+//   return array.join(" ");
+// }
+
+// Напишіть функцію для роботи з колекцією навчаючих курсів courses:
+
+// addCourse(name) - добавляє курс у кінець колекції
+// removeCourse(name) - видаляє курс із колекції
+// updateCourse(oldName, newName)- змінює імя на нове
+// const courses = ["HTML", "CSS", "JavaScript", "React", "PostgreSQL"];
+
+// addCourse("Express"); // ['HTML', 'CSS', 'JavaScript', 'React', 'PostgreSQL', 'Express']
+// addCourse("CSS"); // 'У вас уже є такий курс'
+// removeCourse("React"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
+// removeCourse("Vue"); // 'Курс з таким іменем не найдено'
+// updateCourse("Express", "NestJS"); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'NestJS']
+
+// function addCourse(name) {
+//     if (courses.includes(name)) {
+//         console.log('У вас уже є такий курс');
+//         return;
+//     }
+//     courses.push(name);
+// }
+
+// function removeCourse(name) {
+//     if (courses.indexOf(name) === -1) {
+//         console.log('Курс з таким іменем не найдено');
+//         return;
+//     }
+//     courses.splice(courses.indexOf(name), 1);
+// }
+
+// function updateCourse(oldName, newName) {
+//     let index = courses.indexOf(oldName);
+//     courses.splice(index, 1, newName);
+// }
+
+
+
+
+// console.log(courses);
