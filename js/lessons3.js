@@ -147,3 +147,14 @@ const scientists = [
 
 // const ageArrSort = [...scientists].sort((a, b) => (a.dead - a.born) - (b.dead - b.born)).map(({ born, dead }) => { return dead - born });
 // console.log(ageArrSort);
+
+
+// 5) відфільтрувати, хто народився в 15, 16, 17ст;
+
+// const filteredArray = scientists.filter(scientist => scientist.born >= 1400 && scientist.born < 1700).map(({name, born }) => `${name} ${born}`)
+// console.log(filteredArray);
+
+
+// 6)знайти рік народження Albert Einstein;
+// const yearOfBorn = scientists.find(({ name, surname }) => name === 'Albert' && surname === 'Einstein');
+// console.log(yearOfBorn.born);
