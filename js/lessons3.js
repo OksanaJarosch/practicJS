@@ -208,31 +208,31 @@ const scientists = [
 // User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
 
 class User {
-  constructor({ username, age, numberOfPosts }) {
+  constructor(username, age, numberOfPosts) {
     this.username = username;
     this.age = age;
     this.numberOfPosts = numberOfPosts;
   }
   getInfo() {
-    return `User ${username} is ${age} years old and has ${numberOfPosts} posts.`;
+    return `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`;
   }
   greeting = () => {
     console.log(
-      `User ${username} is ${age} years old and has ${numberOfPosts} posts.`
+      `User ${this.username} is ${this.age} years old and has ${this.numberOfPosts} posts.`
     );
   };
 }
 
-const user = new User({ username: "Arseniy", age: 15, numberOfPosts: 13 });
+const user = new User("Arseniy", 15, 13);
 
 console.log(user);
-user.getInfo();
+// user.getInfo();
 
 class Person extends User {
-  constructor({ username, age, numberOfPosts }) {
-    super({ username, age, numberOfPosts });
+  constructor(username, age, numberOfPosts) {
+    super(username, age, numberOfPosts);
   }
 }
 
-const person = new Person({ username: "Olha", age: 40, numberOfPosts: 12 });
+const person = new Person("Olha", 40, 12);
 console.log(person.getInfo());
