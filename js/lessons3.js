@@ -158,3 +158,8 @@ const scientists = [
 // 6)знайти рік народження Albert Einstein;
 // const yearOfBorn = scientists.find(({ name, surname }) => name === 'Albert' && surname === 'Einstein');
 // console.log(yearOfBorn.born);
+
+// 7)визначити, чи усі вчені працювали у 19ст;
+
+// const isWorking = scientists.every(({ born }) => born >= 1800 && born <= 1882);
+// console.log(isWorking);
