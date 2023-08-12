@@ -134,3 +134,16 @@ const scientists = [
 //   0
 // );
 // console.log(filteredAge / scientists.length);
+
+
+// 3) відсортувати по алфавіту;
+
+// const sortArr = [...scientists].sort((a, b) => (a.name > b.name) ? 1 : -1);
+
+// console.log(sortArr);
+
+
+// 4)відсортувати по кількості прожитих років;
+
+// const ageArrSort = [...scientists].sort((a, b) => (a.dead - a.born) - (b.dead - b.born)).map(({ born, dead }) => { return dead - born });
+// console.log(ageArrSort);
