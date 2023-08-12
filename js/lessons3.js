@@ -135,25 +135,21 @@ const scientists = [
 // );
 // console.log(filteredAge / scientists.length);
 
-
 // 3) відсортувати по алфавіту;
 
 // const sortArr = [...scientists].sort((a, b) => (a.name > b.name) ? 1 : -1);
 
 // console.log(sortArr);
 
-
 // 4)відсортувати по кількості прожитих років;
 
 // const ageArrSort = [...scientists].sort((a, b) => (a.dead - a.born) - (b.dead - b.born)).map(({ born, dead }) => { return dead - born });
 // console.log(ageArrSort);
 
-
 // 5) відфільтрувати, хто народився в 15, 16, 17ст;
 
 // const filteredArray = scientists.filter(scientist => scientist.born >= 1400 && scientist.born < 1700).map(({name, born }) => `${name} ${born}`)
 // console.log(filteredArray);
-
 
 // 6)знайти рік народження Albert Einstein;
 // const yearOfBorn = scientists.find(({ name, surname }) => name === 'Albert' && surname === 'Einstein');
@@ -180,24 +176,63 @@ const scientists = [
 //   },
 // };
 
-function Person(firstName, lastName, age, gender, interest) {
-  this.firstName = firstName;
-  this.lastName = lastName;
-  this.age = age;
-  this.gender = gender;
-  this.interest = interest;
+// function Person(firstName, lastName, age, gender, interest) {
+//   this.firstName = firstName;
+//   this.lastName = lastName;
+//   this.age = age;
+//   this.gender = gender;
+//   this.interest = interest;
 
-  Person.prototype.bio = function () {
-    console.log(`Привіт ${this.firstName} ${this.lastName} мені ${this.age} років. Мені подобається ${this.interest}`);
+//   Person.prototype.bio = function () {
+//     console.log(`Привіт ${this.firstName} ${this.lastName} мені ${this.age} років. Мені подобається ${this.interest}`);
+//   }
+
+//   this.greeting= function () {
+//     console.log(`Привіт, я ${this.firstName} ${this.lastName}`);
+//   }
+// }
+
+// const myPerson = new Person("Artem", "Skyba", 27, "Male", "Programming");
+
+// console.log(myPerson);
+// myPerson.bio();
+// myPerson.greeting();
+
+// ЗАДАЧА 2
+// Напишіть клас User для створення користувача з наступними властивостями:
+// username - імя, рядок
+// age - вік, число
+// numberOfPosts - кількість постів, число
+// Клас очікує один параметр - об'єкт налаштувань з однойменними властивостями.
+// Добавте метод getInfo(), який повертає рядок:
+// User ${ імя } is ${ вік } years old and has ${ кількість постів } posts.
+
+class User {
+  constructor({ username, age, numberOfPosts }) {
+    this.username = username;
+    this.age = age;
+    this.numberOfPosts = numberOfPosts;
   }
+  getInfo() {
+    return `User ${username} is ${age} years old and has ${numberOfPosts} posts.`;
+  }
+  greeting = () => {
+    console.log(
+      `User ${username} is ${age} years old and has ${numberOfPosts} posts.`
+    );
+  };
+}
 
-  this.greeting= function () {
-    console.log(`Привіт, я ${this.firstName} ${this.lastName}`);
+const user = new User({ username: "Arseniy", age: 15, numberOfPosts: 13 });
+
+console.log(user);
+user.getInfo();
+
+class Person extends User {
+  constructor({ username, age, numberOfPosts }) {
+    super({ username, age, numberOfPosts });
   }
 }
 
-const myPerson = new Person("Artem", "Skyba", 27, "Male", "Programming");
-
-console.log(myPerson);
-myPerson.bio();
-myPerson.greeting();
+const person = new Person({ username: "Olha", age: 40, numberOfPosts: 12 });
+console.log(person.getInfo());
