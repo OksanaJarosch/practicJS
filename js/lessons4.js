@@ -16,7 +16,7 @@
 //     price: 1200000,
 //     description:
 //       'Як і всі моделі Jeep - володіє безпрецедентним поєднанням ходових якостей, комфортності та міського шику. 2,4-літровий бензиновий двигун в поєднанні з шестиступінчастою автоматичною коробкою передач, яка відрізняється плавністю перемикання.',
-    
+
 //   },
 //   {
 //     name: 'toyota',
@@ -61,22 +61,60 @@
 // const elements = cars.map(createElements);
 // listEl.append(...elements);
 
-
-
 // 2.1НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
 
-const formEl = document.querySelector('.form');
-const inputPrice = document.querySelector('#price');
-const quantityPrice = document.querySelector('#quantity');
-const totalPrice = document.querySelector('.text-right');
-const spanText = document.querySelector('.amount');
+// const formEl = document.querySelector('.form');
+// const inputPrice = document.querySelector('#price');
+// const quantityPrice = document.querySelector('#quantity');
+// const totalPrice = document.querySelector('.text-right');
+// const spanText = document.querySelector('.amount');
 
+// formEl.addEventListener('input', calc);
+// function calc() {
+//     spanText.textContent = quantityPrice.value;
+//     const calcTotal = inputPrice.value * quantityPrice.value;
+//     console.log(calcTotal);
+//     totalPrice.textContent = calcTotal;
+// }
 
-formEl.addEventListener('input', calc);
-function calc() {
-    spanText.textContent = quantityPrice.value;
-    const calcTotal = inputPrice.value * quantityPrice.value;
-    console.log(calcTotal);
-    totalPrice.textContent = calcTotal;
+// ЗАДАЧА 3
+// 3.1 Є МАСИВ, ПОТРІБНО СТВОРИТИ РОЗМІТКУ ІЗ ТИХ КАРТОК (ВИКОРИСТАЙТЕ ШАБЛОННИЙ РЯДОК)
+
+const instruments = [
+  {
+    id: 1,
+    img: "https://content.rozetka.com.ua/goods/images/big/13664457.jpg",
+    name: "Молоток",
+    price: 150,
+  },
+  {
+    id: 2,
+    img: "https://machtz.com.ua/files/resized/products/dsc_2898_new.800x550.jpg",
+    name: "Перфоратор",
+    price: 3000,
+  },
+  {
+    id: 3,
+    img: "https://content2.rozetka.com.ua/goods/images/big_tile/232653359.jpg",
+    name: "Рівень",
+    price: 2000,
+  },
+];
+
+const markup = document.querySelector(".js-list");
+
+function createMarkup() {
+  const result = instruments
+    .map(({ id, img, name, price }) => {
+      return `    <li data-id = ${id}>
+      <img src="${img}" alt="${name}">
+      <h2>${name}</h2>
+      <p>${price}</p>
+    </li>`;
+    })
+    .join("");
+  console.log(result);
+  markup.insertAdjacentHTML("beforeend", result);
 }
 
+createMarkup();
