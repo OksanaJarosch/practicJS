@@ -1,4 +1,4 @@
-// ЗАДАЧА 1 
+// ЗАДАЧА 1
 // Створіть карточки товару з масиву використовуючи createElement
 
 // js/
@@ -37,27 +37,46 @@
 // html/
 // <ul class="js-goods"></ul>
 
-import cars from "./date/cars.js"
+// import cars from "./date/cars.js"
 
-const listEl = document.querySelector('.js-goods');
+// const listEl = document.querySelector('.js-goods');
 
-function createElements ({name, img, price, description}){
-const oneCar = document.createElement('li');
-const title = document.createElement('h2');
-const photo = document.createElement('img');
-const carPrice = document.createElement('p');
-const text = document.createElement('p');
+// function createElements ({name, img, price, description}){
+// const oneCar = document.createElement('li');
+// const title = document.createElement('h2');
+// const photo = document.createElement('img');
+// const carPrice = document.createElement('p');
+// const text = document.createElement('p');
 
-title.textContent = name;
-photo.src = img;
-photo.width = 300;
-carPrice.textContent = price;
-text.textContent = description;
+// title.textContent = name;
+// photo.src = img;
+// photo.width = 300;
+// carPrice.textContent = price;
+// text.textContent = description;
 
-oneCar.append(photo, title, carPrice, text);
-return oneCar;
+// oneCar.append(photo, title, carPrice, text);
+// return oneCar;
+// }
+
+// const elements = cars.map(createElements);
+// listEl.append(...elements);
+
+
+
+// 2.1НАПИШІТЬ КАЛЬКУЛЯТОР, ЯКИЙ БУДЕ РАХУВАТИ ЦІНУ ШАШЛИКА, В ЗАЛЕЖНОСТІ ВІД ЦІНИ ЗА КІЛОГРАМ І КІЛЬКОСТІ КУПЛЕНОГО ПРОДУКТА , І БУДЕ ВИВОДИТИ РЕЗУЛЬТАТ НА ЕКРАН
+
+const formEl = document.querySelector('.form');
+const inputPrice = document.querySelector('#price');
+const quantityPrice = document.querySelector('#quantity');
+const totalPrice = document.querySelector('.text-right');
+const spanText = document.querySelector('.amount');
+
+
+formEl.addEventListener('input', calc);
+function calc() {
+    spanText.textContent = quantityPrice.value;
+    const calcTotal = inputPrice.value * quantityPrice.value;
+    console.log(calcTotal);
+    totalPrice.textContent = calcTotal;
 }
-
-const elements = cars.map(createElements);
-listEl.append(...elements);
 
